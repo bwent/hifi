@@ -12,7 +12,7 @@
 
 HIFI_PUBLIC_BUCKET = "http://s3.amazonaws.com/hifi-public/";
 
-var SLIDER_RANGE_INCREMENT_SCALE = 1 / 1000;
+var SLIDER_RANGE_INCREMENT_SCALE = 1/1000;
 var THUMB_COLOR = {
     red: 150,
     green: 150,
@@ -127,7 +127,7 @@ var CHECK_MARK_COLOR = {
 
     Slider.prototype.updateWithKeys = function(direction) {
         this.range = this.maxThumbX - this.minThumbX;
-        this.thumbX += direction * (this.range * SCALE);
+        this.thumbX += direction * (this.range * SLIDER_RANGE_INCREMENT_SCALE);
         this.updateThumb();
         this.onValueChanged(this.getValue());
     };
